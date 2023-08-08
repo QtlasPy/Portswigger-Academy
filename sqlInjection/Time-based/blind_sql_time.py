@@ -30,7 +30,7 @@ class Injection:
     def getMdp(self): #Brute force admin password letter by letter.
 
         chars = [chr(i).lower() for i in range(65, 91)] + [str(i) for i in range(0, 10)] #List of lowercase letter and number (0-9)
-        length = 20
+        length = self.getLen()
 
         passwd = ''
 
