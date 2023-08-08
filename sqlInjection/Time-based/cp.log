@@ -1,0 +1,8 @@
+INFO: Platform: linux
+INFO: Version Info: v0.3.0
+DEBUG: Log Path: cp.log
+DEBUG: command: ['python3', '/home/atlas/Documents/Portswigger-Academy/sqlInjection/Time-based/blind_sql_time.py']
+DEBUG: file: None
+DEBUG: pause: True
+DEBUG: repl: python3
+DEBUG: args: ['/home/atlas/Documents/Portswigger-Academy/sqlInjection/Time-based/blind_sql_time.py']
