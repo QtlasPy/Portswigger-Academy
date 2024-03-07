@@ -36,6 +36,9 @@ On peut cependant identifier des points communs entre les causes qui ont conduit
   </ol>
   </p>
     <li><strong> Scenario imprevue </strong> </li>
-    <p> Lorsque un développeur va concevoir un site web, il va émettre des scénarios et des assumations sur ce qu'un utilisateur normale devrait faire par rapport à une fonctionalite doneee. Une mauvaise pratique est de pensée que l'utilisateur suivra toujours le scénario écrit pour une fonctionalite, dans ce cas-là l'application web manquera énormément d'anticipations vis a vis des scenarios imprevue et peut eventuellement ammener a etre exploiter. Prenons un autre exemple, celui d'un site marchand et imaginons le scenatio classique d'un achat.</p>
+    <p> Lorsque un développeur va concevoir un site web, il va émettre des scénarios et des assumations sur ce qu'un utilisateur normale devrait faire par rapport à une fonctionalite doneee. Une mauvaise pratique est de pensée que l'utilisateur suivra toujours le scénario écrit pour une fonctionalite, dans ce cas-là l'application web manquera énormément d'anticipations vis a vis des scenarios imprevue et peut eventuellement ammener a etre exploiter. Prenons un autre exemple, celui d'un site marchand et imaginons le scenario classique d'un achat.</p>
     <img src=scenario.png/>
+    <p> Ici on représente le cas classique d'un achat en ligne. Mais supposons maintenant que nous sortons du scénario écrit et que nous modifions un peu le dérouler de l'achat.</p>
+    <img src=scenario2.png/>
+    <p> Dans le deuxième cas, nous accédons directement à la page de confirmation de commandes sans passer par la page ou nous rentrons nos informations bancaires. Plusieurs questions peuvent se poser alors, sont ce que le serveur a été penser pour anticiper ce scénario . Ou cela va-t-il créer une erreur ? Ou pire encore, est-ce que nous pourrions valider une commande sans rentrées nos informations bancaires   ?</p>
 </ol>
